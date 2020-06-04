@@ -10,13 +10,13 @@ let lastID = 0; //counter for ID
 
 export default function reducer(state = [], action) {
   //pure function. make it exportable to the store
-  if (action.type === actions.ADD)
+  if (action.type === actions.ADDTODO)
     //if an item is added
     return [
       ...state, //copy all the items in the current sate
       // add new item object having some properties
       {
-        id: ++lastID, //evertime an item is incresed the counter id is incremented
+        id: ++lastID, //everytime an item is incresed the counter id is incremented
         description: action.description, //description
         resolved: false,
 
@@ -24,7 +24,7 @@ export default function reducer(state = [], action) {
         //minimul information for adding an item will be  description(no need of ID or resloved property)
       },
     ];
-  else if (action.type === action.REMOVE)
+  else if (action.type === action.REMOVETODO)
     // return a new array that contains items except the item of given ID
     return state.filter((item) => item.id !== action.id);
 

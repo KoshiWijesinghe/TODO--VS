@@ -1,3 +1,3 @@
-export const ADD = "addItem";
-export const REMOVE = "removeItem";
+export const ADDTODO = "addItem";
+export const REMOVETODO = "removeItem";
 // to make code clear

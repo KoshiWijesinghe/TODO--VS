@@ -9,14 +9,15 @@ const unsubscribe = store.subscribe(() => {
 
 //pass an action
 store.dispatch({
-  type: actions.ADD,
-  description: "item 1", //object with description property
+  type: actions.ADDTODO,
+  description: "Todo one", //object with description property
 });
 
 unsubscribe();
 
 store.dispatch({
-  type: actions.REMOVE,
+  type: actions.REMOVETODO,
   id: 1,
 });
+
 console.log(store.getState());
